@@ -1,0 +1,5 @@
+smtp.gmail.com MUST
+# smtp.arubanetworks.com MUST
+# comp1.bob.com MUST
+# comp2.bob.com MUST
+lispm MAY

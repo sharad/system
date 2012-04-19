@@ -1,0 +1,25 @@
+# # This sends mail to Gmail
+# @gmail.com smtp.gmail.com
+
+# # Aruba
+# @arubanetworks.com smtp.arubanetworks.com
+
+
+
+# This sends mail to Gmail
+sh4r4d@gmail.com [smtp.gmail.com]:587
+sharad@pratap.net.in [smtp.gmail.com]:587
+
+# Aruba
+# @arubanetworks.com [smtp.arubanetworks.com]:587
+
+#
+# Except mail going to the tape and closet server
+# comp1.bob.com relay:[comp1.bob.com]
+# comp2.bob.com relay:[comp2.bob.com]
+
+# lispm relay:[lispm]
+@lispm relay:[localhost]
+@lispm.genera.net relay:[localhost]
+
+
