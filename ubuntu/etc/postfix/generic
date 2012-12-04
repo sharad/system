@@ -1,4 +1,11 @@
-s@localhost		sh4r4d@gmail.com
-s@localhost.localdomain	sh4r4d@gmail.com
-s@taj			sh4r4d@gmail.com
-s@taj.net		sh4r4d@gmail.com
+root@localhost		s@localhost
+root@lispm		s@localhost
+root@lispm.net		s@localhost
+root@lispm.genera.net	s@localhost
+MAILER-DAEMON@lispm.genera.net sh4r4d@gmail.com
+
+# s@localhost		sh4r4d@gmail.com
+# s@localhost.localdomain	sh4r4d@gmail.com
+# s@lispm			sh4r4d@gmail.com
+# s@lispm.net		sh4r4d@gmail.com
+# s@lispm.genera.net	sh4r4d@gmail.com

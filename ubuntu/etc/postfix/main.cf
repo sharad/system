@@ -35,7 +35,8 @@ mydestination = lispm.net, lispm, localhost.localdomain, localhost
 # I want to use transport for multiple relay.
 # relayhost = smtp.localdomain
 mynetworks = 127.0.0.0/8 [::ffff:127.0.0.0]/104 [::1]/128
-mailbox_command = /usr/lib/dovecot/deliver -c /etc/dovecot/conf.d/01-mail-stack-delivery.conf -n -m "${EXTENSION}"
+# mailbox_command = /usr/lib/dovecot/deliver -c /etc/dovecot/conf.d/01-mail-stack-delivery.conf -n -m "${EXTENSION}"
+mailbox_command = /usr/lib/dovecot/deliver -c /etc/dovecot/conf.d/01-mail-stack-delivery.conf -m "${EXTENSION}"
 mailbox_size_limit = 0
 recipient_delimiter = +
 inet_interfaces = all
@@ -107,7 +108,8 @@ smtpd_sasl_local_domain = $myhostname
 smtp_sasl_security_options = noanonymous
 #smtp_sasl_security_options =
 smtp_sasl_tls_security_options = noanonymous
-smtpd_sasl_application_name = smtpd
+## deprecated
+# smtpd_sasl_application_name = smtpd
 smtp_use_tls = yes
 smtp_sasl_auth_enable = yes
 smtp_sasl_password_maps = hash:/etc/postfix/sasl_passwd
@@ -134,15 +136,22 @@ disable_dns_lookups = yes
 smtp_generic_maps = hash:/etc/postfix/generic
 #
 #
+## { Section: trouble 11
 ## ONLY CONSIDER SENDER_DEPENDENT_RELAY_HOST
 # transport_maps = hash:/etc/postfix/transport
+## N_O_T_E: I am facing problem when
+# mail remouser@gmail.com -s "test"
+# here from: localuser@$myhostname to: remouser@gmail.com
+# mail goes to sender dependent map that is local
 # transport_maps =
 # sender_dependent_default_transport_maps = regexp:/etc/postfix/sender_transport_map
+## }
+
 biff = yes
 
 
 
-home_mailbox = .maildir/
+home_mailbox = Maildir/
 
 
 # maximal_backoff_time.
@@ -214,3 +223,32 @@ maximal_backoff_time = 3600
 ## NEVER EVER INCLUDE MY SMTP IN THIS VARIABLE
 defer_transports =
 ## }}
+
+
+## {{ for local delivery
+# http://www.postfix.org/LOCAL_RECIPIENT_README.html
+mydestination = $myhostname,lispm.net,localhost.$mydomain,lispm,localhost.localdomain,localhost,lispm.genera.net
+relay_domains = localhost.$mydomain,lispm.genera.net
+local_recipient_maps = proxy:unix:passwd.byname $alias_maps
+
+## }}
+
+
+## { http://www.postfix.org/STANDARD_CONFIGURATION_README.html
+
+# Delivering some but not all accounts locally
+
+# A drawback of sending mail as "user@example.com" (instead of
+# "user@hostname.example.com") is that mail for "root" and other system
+# accounts is also sent to the central mailhost. In order to deliver
+# such accounts locally, you can set up virtual aliases as follows:
+
+# /etc/postfix/main.cf:
+virtual_alias_maps = hash:/etc/postfix/virtual
+
+# /etc/postfix/virtual:
+#    root     root@localhost
+#    . . .
+
+
+## }
