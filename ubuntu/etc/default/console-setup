@@ -1,7 +1,5 @@
-# A configuration file for setupcon
-
 # Change to "yes" and setupcon will explain what is being doing
-VERBOSE_OUTPUT=no
+VERBOSE_OUTPUT="no"
 
 # Setup these consoles.  Most people do not need to change this.
 ACTIVE_CONSOLES="/dev/tty[1-6]"
@@ -17,52 +15,35 @@ CHARMAP="UTF-8"
 # Valid codesets are: Arabic Armenian CyrAsia CyrKoi CyrSlav Ethiopian
 # Georgian Greek Hebrew Lao Lat15 Lat2 Lat38 Lat7 Thai Uni1 Uni2 Uni3
 # Vietnamese.  Read README.fonts for explanation.
-CODESET="Lat15"
+CODESET="Uni2"
 
 # Valid font faces are: VGA (sizes 8, 14 and 16), Terminus (sizes
 # 12x6, 14, 16, 20x10, 24x12, 28x14 and 32x16), TerminusBold (sizes
 # 14, 16, 20x10, 24x12, 28x14 and 32x16), TerminusBoldVGA (sizes 14
-# and 16), Fixed (sizes 13, 14, 15, 16 and 18), Goha (sizes 12, 14 and
-# 16), GohaClassic (sizes 12, 14 and 16).
-FONTFACE="VGA"
+# and 16) and Fixed (sizes 13, 14, 15, 16 and 18).  Only when
+# CODESET=Ethiopian: Goha (sizes 12, 14 and 16) and 
+# GohaClassic (sizes 12, 14 and 16).
+# Set FONTFACE and FONTSIZE to empty strings if you want setupcon to
+# set up the keyboard but to leave the console font unchanged.
+FONTFACE="Fixed"
 FONTSIZE="16"
 
-# You can also directly specify nonstandard font and ACM to load.
+# You can also directly specify nonstandard font or console map to load.
 # Use space as separator if you want to load more than one font.
-# FONT='lat9w-08.psf.gz /usr/local/share/brailefonts/brl-08.psf'
-# ACM=/usr/local/share/consoletrans/my_special_encoding.acm
+# You can use FONT_MAP in order to specify the Unicode map of the font
+# in case the font doesn't have it embedded.
 
+# FONT='lat9w-08.psf.gz brl-8x8.psf'
+# FONT_MAP=/usr/share/consoletrans/lat9u.uni
+# CONSOLE_MAP=/usr/local/share/consoletrans/my_special_encoding.acm
 
-# The following variables describe your keyboard and can have the same
-# values as the XkbModel, XkbLayout, XkbVariant and XkbOptions options
-# in /etc/X11/xorg.conf.
-XKBMODEL="pc105"
-XKBLAYOUT="us"
-XKBVARIANT=""
-XKBOPTIONS=""
+# You can also specify a screen size that setupcon will enforce.  This can not
+# exceed what the current screen resolution can display according to the size of
+# the loaded font.
+#
+# SCREEN_WIDTH=80
+# SCREEN_HEIGHT=25
 
-# {{
-## From sharad
-# Use KEYMAP to specify the default console keymap.  There is a complete tree
-# of keymaps in /usr/share/keymaps to choose from.
-keymap="us"
-
-# Should we first load the 'windowkeys' console keymap?  Most x86 users will
-# say "yes" here.  Note that non-x86 users should leave it as "no".
-windowkeys="yes"
-
-# The maps to load for extended keyboards.  Most users will leave this as is.
-##extended_keymaps=""
-#extended_keymaps="backspace keypad euro2"
-extended_keymaps="sharad.inc"
-
-# Tell dumpkeys(1) to interpret character action codes to be
-# from the specified character set.
-# This only matters if you set unicode="yes" in /etc/rc.conf.
-# For a list of valid sets, run `dumpkeys --help`
-dumpkeys_charset=""
-
-# Some fonts map AltGr-E to the currency symbol ¤ instead of the Euro €
-# To fix this, set to "yes"
-fix_euro="NO"
-# }}
+if [ -f /etc/default/keyboard ]; then
+    . /etc/default/keyboard
+fi
