@@ -1,0 +1,43 @@
+# -*- mode: apache; -*-
+
+
+SetEnv GIT_PROJECT_ROOT /var/www/
+SetEnv GIT_HTTP_EXPORT_ALL
+SetEnv REMOTE_USER=$REDIRECT_REMOTE_USER
+
+
+ScriptAliasMatch \
+        "(?x)^/(.*?)\.git/(HEAD | \
+                                        info/refs | \
+                                        objects/info/[^/]+ | \
+                                        git-(upload|receive)-pack)$" \
+        /usr/lib/git-core/git-http-backend/$1/$2
+
+
+        # /usr/lib/git-core/git-http-backend/$1/$2
+
+        # <Directory /var/www/git>
+        #         # Options +ExecCGI +SymLinksIfOwnerMatch -MultiViews
+        #         # AllowOverride None
+        #         # Order allow,deny
+        #         # allow from all
+
+
+        #         Allow from All
+        #         Options +ExecCGI
+        #         AllowOverride All
+        #     AuthType Basic
+        #     AuthName "Git Access"
+        #     AuthUserFile /var/www/git/passwd
+        #     Require valid-user
+        # </Directory>
+
+<Location /git>
+    AuthType Basic
+    AuthName "Git Access"
+    AuthUserFile /var/www/git/passwd
+    Require valid-user
+</Location>
+
+
+
