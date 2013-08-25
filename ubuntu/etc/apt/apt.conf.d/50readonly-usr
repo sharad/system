@@ -1,0 +1,10 @@
+
+
+
+
+DPkg
+{
+// Auto re-mounting of a readonly /usr
+   Pre-Invoke {"mount -o remount,rw /usr";};
+   Post-Invoke {"echo 'pgrep apt || mount -o remount,ro /usr ' | at now +10 minutes || true";};
+};
