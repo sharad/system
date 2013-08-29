@@ -5,12 +5,30 @@
 # set on any virtual console as long as it isn't in raw mode; loadkeys will
 # go and look for one such, and fail if it can't find one.
 
-description	"set console keymap"
+description	"set console keymap and font"
 
-start on (virtual-filesystems
-          or starting rcS
-          or starting mountall-shell)
+# start on (virtual-filesystems
+#           or starting rcS
+#           or runlevel [2345]
+#           or starting mountall-shell)
 
 task
 
-exec loadkeys /etc/console-setup/cached.kmap.gz
+# exec loadkeys /etc/console-setup/cached.kmap.gz
+
+
+
+# pre-start script
+#    . /etc/default/console-setup
+# end script
+
+
+script
+    . /etc/default/console-setup
+   [ "$windowkeys" = "yes" ] && wkeys="windowkeys.inc"
+   loadkeys -q $wkeys $keymap $extended_keymaps
+end script
+
+
+
+# console output
