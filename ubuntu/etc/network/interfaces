@@ -12,6 +12,30 @@ iface lo inet loopback
 ## iface eth0 inet dhcp
 
 
+##{{
+
+# http://serverfault.com/questions/223601/multiple-mac-addresses-on-one-physical-network-interface-linux
+# http://superuser.com/questions/175475/ifconfig-alias-address-assigned-by-dhcp/334701#334701
 # The primary network interface
 auto eth0
 iface eth0 inet dhcp
+up ip link add link eth0 address 00:11:11:11:11:11 eth0.1 type macvlan
+up ifup eth0.1
+pre-down ifdown eth0.1
+pre-down ip link delete dev eth0.1
+# auto eth0
+# iface eth0 inet static
+# address 172.18.30.100
+# netmask 255.255.255.0
+# gateway 172.18.30.1
+# broadcast 172.18.30.255
+
+# http://www.ubuntugeek.com/howto-add-permanent-static-routes-in-ubuntu.html
+
+##}}
+
+# auto eth0.1
+iface eth0.1 inet dhcp
+
+
+
