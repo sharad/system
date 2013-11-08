@@ -1,0 +1,7 @@
+
+
+
+
+
+%sudo	ALL=(ALL:ALL) NOPASSWD: /sbin/poweroff,/sbin/reboot,/sbin/shutdown,/bin/ls,/bin/chvt,/usr/sbin/service,/usr/lib/pm-utils/bin/pm-action,/usr/sbin/pm-hibernate,/home/s/hell/bin/backuppt,/sbin/ifdown,/sbin/ifup
+
