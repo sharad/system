@@ -1,0 +1,8 @@
+
+[GNOME Session]
+Name=stumpwm
+RequiredComponents=gnome-settings-daemon;
+RequiredProviders=windowmanager;notifications;panel;
+DefaultProvider-windowmanager=stumpwm
+DefaultProvider-panel=stumpwm
+DefaultProvider-notifications=notification-daemon
