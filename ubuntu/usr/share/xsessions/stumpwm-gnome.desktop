@@ -1,0 +1,8 @@
+
+[Desktop Entry]
+Name=StumpWM
+Comment=StumpWM with GNOME but without GNOME Panel
+Exec=/usr/local/bin/gnome-session-stumpwm
+TryExec=gnome-session
+Icon=
+Type=Application

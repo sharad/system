@@ -1,8 +1,7 @@
-
 [Desktop Entry]
-Name=StumpWM
-Comment=StumpWM with GNOME but without GNOME Panel
-Exec=/usr/local/bin/gnome-session-stumpwm
-TryExec=gnome-session
+Name=Stump Window Manager
+Comment=StumpWM is a tiling window manager written in Common Lisp
+Exec=ssh-agent stumpwm
+TryExec=stumpwm
 Icon=
 Type=Application
