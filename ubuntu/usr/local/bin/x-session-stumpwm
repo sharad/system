@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ "x${SSH_AGENT_PID}" = "x" -a "x${SSH_AUTH_SOCK}" = "x" ] && ps ${SSH_AGENT_PID} 2>&1 > /dev/null ; then
+	exec ssh-agent stumpwm "$@"
+else
+	exec stumpwm "$@"
+exit
+
