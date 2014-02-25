@@ -4,5 +4,6 @@ if [ "x${SSH_AGENT_PID}" = "x" -a "x${SSH_AUTH_SOCK}" = "x" ] && ps ${SSH_AGENT_
 	exec ssh-agent stumpwm "$@"
 else
 	exec stumpwm "$@"
+fi
 exit
 

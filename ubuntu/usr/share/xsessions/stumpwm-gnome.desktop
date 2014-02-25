@@ -1,6 +1,6 @@
 
 [Desktop Entry]
-Name=StumpWM
+Name=StumpWM Window Manager with GNOME
 Comment=StumpWM with GNOME but without GNOME Panel
 Exec=/usr/local/bin/gnome-session-stumpwm
 TryExec=gnome-session
