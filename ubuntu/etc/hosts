@@ -1,0 +1,54 @@
+127.0.0.1	localhost
+127.0.1.1	ubuntu-sharad.merunetworks.com ubuntu-sharad
+172.17.0.60     ubuntu-sharad.merunetworks.com ubuntu-sharad
+
+##{{
+
+127.0.0.1          google-analytics.com
+127.0.0.1      www.google-analytics.com
+127.0.0.1      ssl.google-analytics.com
+127.0.0.1           googleanalytics.com
+127.0.0.1       www.googleanalytics.com
+127.0.0.1       ssl.googleanalytics.com
+127.0.0.1         adservices.google.com
+127.0.0.1  pagead.googlesyndication.com
+127.0.0.1 pagead2.googlesyndication.com
+127.0.0.1             fusion.google.com
+127.0.0.1      www.googleadservices.com
+127.0.0.1  partner.googleadservices.com
+127.0.0.1               doubleclick.com
+127.0.0.1               doubleclick.net
+127.0.0.1            ad.doubleclick.net
+127.0.0.1      pubads.g.doubleclick.net
+127.0.0.1                    urchin.com
+127.0.0.1            service.urchin.com
+127.0.0.1      ssl.google-analytics.com
+127.0.0.1      pagead.googlesyndication.com
+127.0.0.1      pagead2.googlesyndication.com
+127.0.0.1      adservices.google.com
+127.0.0.1      ssl.google-analytics.com
+127.0.0.1      www.google-analytics.com
+127.0.0.1      imageads.googleadservices.com
+127.0.0.1      imageads1.googleadservices.com
+127.0.0.1      imageads2.googleadservices.com
+127.0.0.1      imageads3.googleadservices.com
+127.0.0.1      imageads4.googleadservices.com
+127.0.0.1      imageads5.googleadservices.com
+127.0.0.1      imageads6.googleadservices.com
+127.0.0.1      imageads7.googleadservices.com
+127.0.0.1      imageads8.googleadservices.com
+127.0.0.1      imageads9.googleadservices.com
+127.0.0.1      partner.googleadservices.com
+127.0.0.1      www.googleadservices.com
+127.0.0.1      apps5.oingo.com
+127.0.0.1      www.appliedsemantics.com
+127.0.0.1      service.urchin.com
+127.0.0.1      ox-d.netline.com
+127.0.0.1      s0.2mdn.net b.scorecardresearch.com a.scorecardresearch.com
+127.0.0.1      www.googletagservices.com
+127.0.0.1      in-ssl.effectivemeasure.net  in-cdn.effectivemeasure.net in.effectivemeasure.net a.visualrevenue.com
+127.0.0.1      bs.serving-sys.com d2.zedo.com static.chartbeat.com
+127.0.0.1      static.chartbeat.com
+127.0.0.1      static.ak.fbcdn.net
+
+##}}
