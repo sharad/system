@@ -1,27 +1,23 @@
 127.0.0.1	localhost
-127.0.1.1	ubuntu-sharad.merunetworks.com ubuntu-sharad
-172.17.0.60     ubuntu-sharad.merunetworks.com ubuntu-sharad
 
 ##{{
-
-127.0.0.1          google-analytics.com
+127.0.0.1      google-analytics.com
 127.0.0.1      www.google-analytics.com
 127.0.0.1      ssl.google-analytics.com
-127.0.0.1           googleanalytics.com
-127.0.0.1       www.googleanalytics.com
-127.0.0.1       ssl.googleanalytics.com
-127.0.0.1         adservices.google.com
-127.0.0.1  pagead.googlesyndication.com
-127.0.0.1 pagead2.googlesyndication.com
-127.0.0.1             fusion.google.com
+127.0.0.1      googleanalytics.com
+127.0.0.1      www.googleanalytics.com
+127.0.0.1      ssl.googleanalytics.com
+127.0.0.1      adservices.google.com
+127.0.0.1      pagead.googlesyndication.com
+127.0.0.1      pagead2.googlesyndication.com
+127.0.0.1      fusion.google.com
 127.0.0.1      www.googleadservices.com
-127.0.0.1  partner.googleadservices.com
-127.0.0.1               doubleclick.com
-127.0.0.1               doubleclick.net
-127.0.0.1            ad.doubleclick.net
+127.0.0.1      partner.googleadservices.com
+127.0.0.1      doubleclick.net
+127.0.0.1      ad.doubleclick.net
 127.0.0.1      pubads.g.doubleclick.net
-127.0.0.1                    urchin.com
-127.0.0.1            service.urchin.com
+127.0.0.1      urchin.com
+127.0.0.1      service.urchin.com
 127.0.0.1      ssl.google-analytics.com
 127.0.0.1      pagead.googlesyndication.com
 127.0.0.1      pagead2.googlesyndication.com
@@ -44,11 +40,167 @@
 127.0.0.1      www.appliedsemantics.com
 127.0.0.1      service.urchin.com
 127.0.0.1      ox-d.netline.com
-127.0.0.1      s0.2mdn.net b.scorecardresearch.com a.scorecardresearch.com
+127.0.0.1      s0.2mdn.net
+127.0.0.1      b.scorecardresearch.com
+127.0.0.1      a.scorecardresearch.com
 127.0.0.1      www.googletagservices.com
-127.0.0.1      in-ssl.effectivemeasure.net  in-cdn.effectivemeasure.net in.effectivemeasure.net a.visualrevenue.com
+127.0.0.1      in-ssl.effectivemeasure.net
+127.0.0.1      in-cdn.effectivemeasure.net
+127.0.0.1      in.effectivemeasure.net
+127.0.0.1      a.visualrevenue.com
 127.0.0.1      bs.serving-sys.com d2.zedo.com static.chartbeat.com
 127.0.0.1      static.chartbeat.com
 127.0.0.1      static.ak.fbcdn.net
-
+127.0.0.1      pagead.googlesyndication.com
+127.0.0.1      adservices.google.com
+127.0.0.1      imageads.googleadservices.com
+127.0.0.1      imageads1.googleadservices.com
+127.0.0.1      imageads2.googleadservices.com
+127.0.0.1      imageads3.googleadservices.com
+127.0.0.1      imageads4.googleadservices.com
+127.0.0.1      imageads5.googleadservices.com
+127.0.0.1      imageads6.googleadservices.com
+127.0.0.1      imageads7.googleadservices.com
+127.0.0.1      imageads8.googleadservices.com
+127.0.0.1      imageads9.googleadservices.com
+127.0.0.1      partner.googleadservices.com
+127.0.0.1      www.googleadservices.com
+127.0.0.1      apps5.oingo.com
+127.0.0.1      www.appliedsemantics.com
+127.0.0.1      service.urchin.com
+127.0.0.1      a.rad.msn.com
+127.0.0.1      ad.uk.doubleclick.net
+127.0.0.1      ad.yieldmanager.com
+127.0.0.1      ads.dennisnet.co.uk
+127.0.0.1      alexa.com
+127.0.0.1      b.rad.msn.com
+127.0.0.1      blogads.com
+127.0.0.1      bs.serving-sys.com
+127.0.0.1      buttons.googlesyndication.com
+127.0.0.1      doubleclick.net
+127.0.0.1      exponential.com
+127.0.0.1      google-analytics.com
+127.0.0.1      googlesyndication.com
+127.0.0.1      intelli-direct.com
+127.0.0.1      intellitxt.com
+127.0.0.1      pagead2.googlesyndication.com
+127.0.0.1      rad.msn.com
+127.0.0.1      rmxads.com
+127.0.0.1      ssl.google-analytics.com
+127.0.0.1      xpcs.ads.yahoo.com
+127.0.0.1      yieldmanager.com
+127.0.0.1      google-analytics.com
+127.0.0.1      ssl.google-analytics.com
+127.0.0.1      pagead2.googlesyndication.com
+127.0.0.1      googlesyndication.com
+127.0.0.1      ox-d.netline.com
+127.0.0.1      google-analytics.com
+127.0.0.1      www.google-analytics.com
+127.0.0.1      ssl.google-analytics.com
+127.0.0.1      pagead.googlesyndication.com
+127.0.0.1      pagead2.googlesyndication.com
+127.0.0.1      adservices.google.com
+127.0.0.1      ssl.google-analytics.com
+127.0.0.1      www.google-analytics.com
+127.0.0.1      imageads.googleadservices.com
+127.0.0.1      imageads1.googleadservices.com
+127.0.0.1      imageads2.googleadservices.com
+127.0.0.1      imageads3.googleadservices.com
+127.0.0.1      imageads4.googleadservices.com
+127.0.0.1      imageads5.googleadservices.com
+127.0.0.1      imageads6.googleadservices.com
+127.0.0.1      imageads7.googleadservices.com
+127.0.0.1      imageads8.googleadservices.com
+127.0.0.1      imageads9.googleadservices.com
+127.0.0.1      partner.googleadservices.com
+127.0.0.1      www.googleadservices.com
+127.0.0.1      apps5.oingo.com
+127.0.0.1      www.appliedsemantics.com
+127.0.0.1      service.urchin.com
+# [Google      Inc]
+127.0.0.1      domains.googlesyndication.com #[Parking Service]
+127.0.0.1      pagead2.googlesyndication.com #[Google AdWords]
+127.0.0.1      video-stats.video.google.com
+# 127.0.0.     1 ssl.google-analytics.com #[disabled = Firefox issues]
+127.0.0.1      www.google-analytics.com #[Google Analytics]
+127.0.0.1      4.afs.googleadservices.com
+127.0.0.1      pagead2.googleadservices.com
+127.0.0.1      partner.googleadservices.com
+127.0.0.1      www.googleadservices.com
+127.0.0.1      apps5.oingo.com #[Microsoft.Typo-Patrol]
+127.0.0.1      www.appliedsemantics.com
+127.0.0.1      service.urchin.com #[Urchin Tracking Module]
+127.0.0.1      google-analytics.com
+127.0.0.1      www.google-analytics.com
+127.0.0.1      ssl.google-analytics.com
+127.0.0.1      googleanalytics.com
+127.0.0.1      www.googleanalytics.com
+127.0.0.1      ssl.googleanalytics.com
+127.0.0.1      adservices.google.com
+127.0.0.1      pagead.googlesyndication.com
+127.0.0.1      pagead2.googlesyndication.com
+127.0.0.1      fusion.google.com
+127.0.0.1      www.googleadservices.com
+127.0.0.1      partner.googleadservices.com
+127.0.0.1      doubleclick.com
+127.0.0.1      ad.doubleclick.net
+127.0.0.1      pubads.g.doubleclick.net
+127.0.0.1      urchin.com
+127.0.0.1      service.urchin.com
+127.0.0.1      pagead2.googlesyndication.com
+127.0.0.1      partner.googleadservices.com
+127.0.0.1      imageads.googleadservices.com
+127.0.0.1      imageads1.googleadservices.com
+127.0.0.1      imageads2.googleadservices.com
+127.0.0.1      imageads3.googleadservices.com
+127.0.0.1      imageads4.googleadservices.com
+127.0.0.1      imageads5.googleadservices.com
+127.0.0.1      imageads6.googleadservices.com
+127.0.0.1      imageads7.googleadservices.com
+127.0.0.1      imageads8.googleadservices.com
+127.0.0.1      imageads9.googleadservices.com
+127.0.0.1      pagead.googlesyndication.com
+127.0.0.1      adservices.google.com
+127.0.0.1      imageads.googleadservices.com
+127.0.0.1      imageads1.googleadservices.com
+127.0.0.1      imageads2.googleadservices.com
+127.0.0.1      imageads3.googleadservices.com
+127.0.0.1      imageads4.googleadservices.com
+127.0.0.1      imageads5.googleadservices.com
+127.0.0.1      imageads6.googleadservices.com
+127.0.0.1      imageads7.googleadservices.com
+127.0.0.1      imageads8.googleadservices.com
+127.0.0.1      imageads9.googleadservices.com
+127.0.0.1      partner.googleadservices.com
+127.0.0.1      www.googleadservices.com
+127.0.0.1      apps5.oingo.com
+127.0.0.1      www.appliedsemantics.com
+127.0.0.1      service.urchin.com
+127.0.0.1      a.rad.msn.com
+127.0.0.1      ad.uk.doubleclick.net
+127.0.0.1      ad.yieldmanager.com
+127.0.0.1      ads.dennisnet.co.uk
+127.0.0.1      alexa.com
+127.0.0.1      b.rad.msn.com
+127.0.0.1      blogads.com
+127.0.0.1      bs.serving-sys.com
+127.0.0.1      buttons.googlesyndication.com
+127.0.0.1      doubleclick.net
+127.0.0.1      exponential.com
+127.0.0.1      google-analytics.com
+127.0.0.1      googlesyndication.com
+127.0.0.1      intelli-direct.com
+127.0.0.1      intellitxt.com
+127.0.0.1      pagead2.googlesyndication.com
+127.0.0.1      rad.msn.com
+127.0.0.1      rmxads.com
+127.0.0.1      ssl.google-analytics.com
+127.0.0.1      xpcs.ads.yahoo.com
+127.0.0.1      yieldmanager.com
+127.0.0.1      google-analytics.com
+127.0.0.1      ssl.google-analytics.com
+127.0.0.1      pagead2.googlesyndication.com
+127.0.0.1      googlesyndication.com
+127.0.0.1      d3.zedo.com d13.zedo.com z1.zedo.com d2.zedo.com
+127.0.0.1      ads.audiencelogy.com delivery.ipvertising.com banners.ero-advertising.com
 ##}}
