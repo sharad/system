@@ -2,6 +2,9 @@
 127.0.0.1	localhost
 
 ##{{
+
+## In Win dow use C:\Windows\System32\drivers\etc\hosts
+
 127.0.0.1      google-analytics.com
 127.0.0.1      www.google-analytics.com
 127.0.0.1      ssl.google-analytics.com
