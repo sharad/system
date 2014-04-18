@@ -8,7 +8,7 @@
 XKBMODEL="pc105"
 XKBLAYOUT="us"
 XKBVARIANT=""
-XKBOPTIONS=""
+XKBOPTIONS="ctrl(ralt_rctrl),ctrl(rctrl_ralt),mykbd(lalt_lctrl),mykbd(caps_lalt)"
 
 # If you don't want to use the XKB layout on the console, you can
 # specify an alternative keymap.  Make sure it will be accessible
@@ -40,4 +40,3 @@ dumpkeys_charset=""
 # To fix this, set to "yes"
 fix_euro="NO"
 # }}
-
