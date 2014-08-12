@@ -8,8 +8,9 @@ test -x $ETHTOOL || exit 0
 
 # Bring down interface (for wireless cards that are up to scan for networks), change MAC address to a random vendor address, bring up the interface
 [ "$IFACE" != "eth0" ] || ifconfig "$IFACE" down
+# ip link show dev $IFACE
+ip addr show dev $IFACE
 macchanger -A "$IFACE"
+ip addr show dev $IFACE
 [ "$IFACE" != "eth0" ] || ifconfig "$IFACE" up
 exit 0
-
-
