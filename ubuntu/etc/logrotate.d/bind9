@@ -1,0 +1,12 @@
+/var/log/named/*.log {
+daily
+size 1M
+rotate 2
+missingok
+notifempty
+compress
+create 0644 bind bind
+postrotate
+/etc/init.d/bind9 reload > /dev/null
+endscript
+}
