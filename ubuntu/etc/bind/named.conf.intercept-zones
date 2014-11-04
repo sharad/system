@@ -401,3 +401,8 @@ zone "collective-media.net" {
         type master;
         file "/etc/bind/db.intercept";
 };
+
+zone "dmtracker.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
