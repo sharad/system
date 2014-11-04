@@ -107,7 +107,7 @@ zone "chartbeat.com" {
         file "/etc/bind/db.intercept";
 };
 
-zone "co.uk" {
+zone "dennisnet.co.uk" {
         type master;
         file "/etc/bind/db.intercept";
 };
@@ -348,6 +348,26 @@ zone "yieldmanager.com" {
 };
 
 zone "zedo.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "domdex.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "magnetic.is" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "magnetic.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "buysellads.com" {
         type master;
         file "/etc/bind/db.intercept";
 };
