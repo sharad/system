@@ -371,3 +371,33 @@ zone "buysellads.com" {
         type master;
         file "/etc/bind/db.intercept";
 };
+
+# zone "comodoca.com" {
+#         type master;
+#         file "/etc/bind/db.intercept";
+# };
+
+zone "revsci.net" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "chango.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "optkit.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "outbrain.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "collective-media.net" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
