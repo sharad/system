@@ -372,10 +372,10 @@ zone "buysellads.com" {
         file "/etc/bind/db.intercept";
 };
 
-# zone "comodoca.com" {
-#         type master;
-#         file "/etc/bind/db.intercept";
-# };
+// zone "comodoca.com" {
+//         type master;
+//         file "/etc/bind/db.intercept";
+// };
 
 zone "revsci.net" {
         type master;
