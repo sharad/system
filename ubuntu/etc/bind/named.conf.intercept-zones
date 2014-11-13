@@ -406,3 +406,8 @@ zone "dmtracker.com" {
         type master;
         file "/etc/bind/db.intercept";
 };
+
+zone "advertserve.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
