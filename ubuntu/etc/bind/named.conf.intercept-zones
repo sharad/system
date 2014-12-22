@@ -444,3 +444,13 @@ zone "adtechus.com" {
         file "/etc/bind/db.intercept";
 };
 
+zone "goodreads.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "streamads.yahoo.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
