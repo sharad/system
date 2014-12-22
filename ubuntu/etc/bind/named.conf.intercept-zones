@@ -1,4 +1,445 @@
+
+zone "2mdn.net" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "33across.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "adadvisor.net" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "adap.tv" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "addthis.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "adnxs.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "adserver.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "adsrvr.org" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "adtech.de" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "advertserve.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "adzerk.ent" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "adzerk.net" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "agkn.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "alexa.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "amazon-adsystem.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "amazonaws.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "appliedsemantics.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "audiencelogy.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "blogads.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "bluekai.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "brilig.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "buysellads.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "casalemedia.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "chango.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "chartbeat.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "collective-media.net" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "comodoca.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "connect.facebook.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "crwdcntrl.net" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "demdex.net" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "dennisnet.co.uk" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "dmtracker.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "dmtry.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "domdex.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "doubleclick.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "doubleclick.net" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "doubleclick.org" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "effectivemeasure.net" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "exelator.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "exoclick.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "exponential.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "fbcdn.net" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "gigya.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "githubapp.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "googleadservices.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "google-analytics.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "googleanalytics.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "googlesyndication.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "googletagservices.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "imrworldwide.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "intelli-direct.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "intellitxt.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "magnetic.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "magnetic.is" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "mathtag.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "mediaplex.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "mookie1.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "msn.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "netline.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "nexac.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "oingo.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "optkit.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "outbrain.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "p-td.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "qsstats.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "quantserve.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "raasnet.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "reson8.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "revsci.net" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "rfihub.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "rlcdn.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "rmxads.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "ru4.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "scorecardresearch.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "serving-sys.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "sharethis.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "statcounter.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "syndication.twitter.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "tidaltv.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "triggit.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "tubemogul.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "urchin.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "visualrevenue.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "w55c.net" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "webengage.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "wtp101.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "yieldmanager.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
 zone "zedo.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "adtechus.com" {
         type master;
         file "/etc/bind/db.intercept";
 };

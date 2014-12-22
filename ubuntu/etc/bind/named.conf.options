@@ -10,11 +10,9 @@ options {
 	// Uncomment the following block, and insert the addresses replacing
 	// the all-0's placeholder.
 
-	// forwarders {
-	// 	0.0.0.0;
-	// };
 
 
+	forward only;
         include "/etc/bind/named.conf.forwarders";
 
 	//========================================================================
@@ -28,6 +26,14 @@ options {
         ### added by me -sharad
         dnssec-enable no;
         dnssec-validation no;
+
+
+	// forward only;
+        // Accept requests for internal network only
+        // allow-query { internals; };
+
+        // Allow recursive queries to the local hosts
+        // allow-recursion { internals; };
         ### added by me -sharad
 
 	auth-nxdomain no;    # conform to RFC1035

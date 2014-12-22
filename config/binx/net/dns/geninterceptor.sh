@@ -13,7 +13,7 @@ function main() {
     if (( ${+domain} )) ; then
         if [ -w ~/.system/config/ip/block ] ; then
             if ! grep $domain ~/.system/config/ip/block ; then
-                # print $domain >> ~/.system/config/ip/block
+                print $domain >> ~/.system/config/ip/block
                 cat <<EOF | tee --append $dnsinterceptlist
 zone "$domain" {
         type master;
@@ -27,8 +27,9 @@ EOF
             fi
         fi
     else
+        echo > $dnsinterceptlist
         foreach d ( $(sort -u ~/.system/config/ip/block | sed '/^$/d' ) ) {
-                cat <<EOF | tee $dnsinterceptlist
+                cat <<EOF | tee --append $dnsinterceptlist
 zone "$d" {
         type master;
         file "/etc/bind/db.intercept";
