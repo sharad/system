@@ -459,3 +459,8 @@ zone "mybuys.com" {
         file "/etc/bind/db.intercept";
 };
 
+zone "omgpm.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
