@@ -464,3 +464,38 @@ zone "omgpm.com" {
         file "/etc/bind/db.intercept";
 };
 
+zone "chartbeat.net" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "112.2o7.net" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "disqus.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "krxd.net" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "ml314.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "licdn.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "marfeel.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
