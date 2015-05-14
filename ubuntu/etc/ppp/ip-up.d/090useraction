@@ -1,0 +1,14 @@
+#!/bin/sh
+#
+# ifup hook script for adm group users
+#
+# This file is part of the resolvconf package.
+#
+
+for u in $(members adm)
+do
+    uhome=$(getent passwd $u | cut -d: -f6)
+    if [ -x $uhome/.rsetup/pppup/run ] ; then
+        su $u -c $uhome/.rsetup/pppup/run 2>&1 > /dev/null
+    fi
+done
