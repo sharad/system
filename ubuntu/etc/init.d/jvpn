@@ -1,0 +1,142 @@
+#! /bin/bash
+### BEGIN INIT INFO
+# Provides:          jvpn
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: jvpn
+# Description:       Start jvpn daemon
+### END INIT INFO
+
+# Init script for jvpn
+# Copyright (C) 2010  Sharad
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+# Do NOT "set -e"
+
+# PATH should only include /usr/* if it runs after the mountnfs.sh script
+PATH=/sbin:/usr/sbin:/bin:/usr/bin
+DESC="jvpn"
+NAME=jvpn
+DAEMON=/usr/local/sbin/jvpn
+SCRIPTNAME=/etc/init.d/$NAME
+DAEMONUSER=jvpn
+
+# Exit if the package is not installed
+[ -x "$DAEMON" ] || exit 0
+
+# Read configuration variable file if it is present
+[ -r /etc/default/$NAME ] && . /etc/default/$NAME
+
+DAEMON_ARGS="-c /usr/local/etc/jvpn/$CONFIG"
+# Check config
+if [ -z "$JVPN_CONFIG_DONE" ]
+then
+	echo "Warning: jvpn not configured, edit config file in /etc/default/$NAME." 1>&2
+        exit 0
+fi
+
+# Load the VERBOSE setting and other rcS variables
+. /lib/init/vars.sh
+
+# Define LSB log_* functions.
+# Depend on lsb-base (>= 3.0-6) to ensure that this file is present.
+. /lib/lsb/init-functions
+
+#
+# Function that starts the daemon/service
+#
+do_start()
+{
+	# Return
+	#   0 if daemon has been started
+	#   1 if daemon was already running
+	#   2 if daemon could not be started
+	start-stop-daemon --start --quiet --user $DAEMONUSER --exec $DAEMON --test \
+	    || return 1
+
+	start-stop-daemon --start --quiet --background \
+            --no-close \
+            --make-pidfile --pidfile /usr/local/var/run/$NAME/pid \
+            --user $DAEMONUSER --chuid $DAEMONUSER \
+            --exec $DAEMON -- \
+	    -c /usr/local/etc/jvpn/$CONFIG \
+            --pid_file /usr/local/var/run/$NAME/pid \
+	    $DAEMON_ARGS \
+            2>&1 > /tmp/jvpnxx.log \
+	    || return 2
+}
+
+#
+# Function that stops the daemon/service
+#
+do_stop()
+{
+	# Return
+	#   0 if daemon has been stopped
+	#   1 if daemon was already stopped
+	#   2 if daemon could not be stopped
+	#   other if a failure occurred
+	start-stop-daemon -n $NAME -v --stop --quiet --retry=TERM/30/KILL/5 --user $DAEMONUSER --exec $DAEMON
+        kill -TERM $(cat /usr/local/var/run/$NAME/pid)
+        sleep 7s;
+        kill -KILL $(cat /usr/local/var/run/$NAME/pid)
+        # cp /etc/bind/named.conf.forwarders-jvpn /etc/bind/named.conf.forwarders
+        # service bind9 reload
+}
+
+case "$1" in
+  start)
+	[ "$VERBOSE" != no ] && log_daemon_msg "Starting $DESC" "$NAME"
+	do_start
+	case "$?" in
+		0|1) [ "$VERBOSE" != no ] && log_end_msg 0 ;;
+		2) [ "$VERBOSE" != no ] && log_end_msg 1 ;;
+	esac
+	;;
+  stop)
+	[ "$VERBOSE" != no ] && log_daemon_msg "Stopping $DESC" "$NAME"
+	do_stop
+	case "$?" in
+		0|1) [ "$VERBOSE" != no ] && log_end_msg 0 ;;
+		2) [ "$VERBOSE" != no ] && log_end_msg 1 ;;
+	esac
+	;;
+  restart|force-reload)
+	log_daemon_msg "Restarting $DESC" "$NAME"
+	do_stop
+	case "$?" in
+	  0|1)
+		do_start
+		case "$?" in
+			0) log_end_msg 0 ;;
+			1) log_end_msg 1 ;; # Old process is still running
+			*) log_end_msg 1 ;; # Failed to start
+		esac
+		;;
+	  *)
+	  	# Failed to stop
+		log_end_msg 1
+		;;
+	esac
+	;;
+  *)
+	echo "Usage: $SCRIPTNAME {start|stop|restart|force-reload}" >&2
+	exit 3
+	;;
+esac
+
+true  # Set exit status to 0 (succes)
