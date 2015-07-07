@@ -94,6 +94,7 @@ do_stop()
         kill -TERM $(cat /usr/local/var/run/$NAME/pid)
         sleep 7s;
         kill -KILL $(cat /usr/local/var/run/$NAME/pid)
+        /usr/local/var/lib/jvpn/sbin/disconnect_hook.sh
         # cp /etc/bind/named.conf.forwarders-jvpn /etc/bind/named.conf.forwarders
         # service bind9 reload
 }
