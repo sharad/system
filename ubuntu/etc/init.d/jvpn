@@ -111,9 +111,10 @@ do_status()
         if [ -r $PREFIX/var/run/$NAME/pid ] &&
             ps -l $(cat $PREFIX/var/run/$NAME/pid)
         then
-            echo $NAME is running with pid $(cat $PREFIX/var/run/$NAME/pid)
+            echo instance of $NAME is running with pid $(cat $PREFIX/var/run/$NAME/pid)...
         else
-            echo $NAME no instance is running
+            echo no instance of $NAME is running...
+            exit 3
         fi
 }
 
