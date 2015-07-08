@@ -29,6 +29,7 @@
 
 # PATH should only include /usr/* if it runs after the mountnfs.sh script
 PATH=/sbin:/usr/sbin:/bin:/usr/bin
+PREFIX=
 DESC="n2n edge"
 NAME=n2n-edge
 DAEMON=/usr/sbin/edge
@@ -38,7 +39,7 @@ SCRIPTNAME=/etc/init.d/$NAME
 [ -x "$DAEMON" ] || exit 0
 
 # Read configuration variable file if it is present
-[ -r /etc/default/$NAME ] && . /etc/default/$NAME
+[ -r $PREFIX/etc/default/$NAME ] && . $PREFIX/etc/default/$NAME
 
 # Check config
 if [ -z "$N2N_EDGE_CONFIG_DONE" ]
@@ -66,7 +67,7 @@ do_start()
 	start-stop-daemon --start --quiet --user nobody --exec $DAEMON --test \
 		|| return 1
 	export N2N_KEY
-	start-stop-daemon --start --quiet --background  --make-pidfile --pidfile /var/lib/$NAME/pid --user nobody --exec $DAEMON -- \
+	start-stop-daemon --start --quiet --background  --make-pidfile --pidfile $PREFIX/var/lib/$NAME/pid --user nobody --exec $DAEMON -- \
 		-a $N2N_IP -c $N2N_COMMUNITY -l $N2N_SUPERNODE:$N2N_SUPERNODE_PORT -u $(id -u nobody) -g $(id -g nobody) \
 		$DAEMON_ARGS \
 		|| return 2
@@ -83,6 +84,19 @@ do_stop()
 	#   2 if daemon could not be stopped
 	#   other if a failure occurred
 	start-stop-daemon --stop --quiet --retry=TERM/30/KILL/5 --user nobody --exec $DAEMON
+}
+
+do_status()
+{
+	# Return
+        if [ -r $PREFIX/var/run/$NAME/pid ] &&
+            ps -l $(cat $PREFIX/var/run/$NAME/pid)
+        then
+            echo instance of $NAME is running with pid $(cat $PREFIX/var/run/$NAME/pid)...
+        else
+            echo no instance of $NAME is running...
+            exit 3
+        fi
 }
 
 case "$1" in
@@ -102,6 +116,10 @@ case "$1" in
 		2) [ "$VERBOSE" != no ] && log_end_msg 1 ;;
 	esac
 	;;
+  status)
+	[ "$VERBOSE" != no ] && log_daemon_msg "Status $DESC" "$NAME"
+	do_status
+        ;;
   restart|force-reload)
 	log_daemon_msg "Restarting $DESC" "$NAME"
 	do_stop
