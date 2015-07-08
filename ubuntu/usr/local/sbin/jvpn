@@ -943,7 +943,7 @@ sub connect_hook {
   close(FH);
 
 
-  system($ENV{HOME} . "/sbin/connect_hook.sh");
+  # system($ENV{HOME} . "/sbin/connect_hook.sh");
 
 
 #   print "file $tmpfile";
@@ -969,7 +969,7 @@ sub connect_hook {
 sub disconnect_hook {
   # return;
   print "calling disconnect hook\n";
-  system($ENV{HOME} . "/sbin/disconnect_hook.sh");
+  # system($ENV{HOME} . "/sbin/disconnect_hook.sh");
   # system("gksudo cp /etc/bind/named.conf.forwarders-jvpn /etc/bind/named.conf.forwarders");
   # system("syncimap -d");
   # system("gksudo service bind9 reload");
