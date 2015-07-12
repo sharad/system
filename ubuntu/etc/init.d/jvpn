@@ -80,7 +80,7 @@ do_start()
             2>&1 > /tmp/jvpnxx.log \
 	    || return 2
 
-        echo Hello
+        echo waiting for jvpn connect_hook
         sleep 10s
         $PREFIX/var/lib/jvpn/sbin/connect_hook.sh
 }
