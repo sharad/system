@@ -80,9 +80,14 @@ do_start()
             2>&1 > /tmp/jvpnxx.log \
 	    || return 2
 
-        echo waiting for jvpn connect_hook
+        echo waiting for jvpn connect_hook >&2
         sleep 10s
-        $PREFIX/var/lib/jvpn/sbin/connect_hook.sh
+        if ps $(cat $PREFIX/var/run/$NAME/pid) 2>&1 > /dev/null
+        then
+            $PREFIX/var/lib/jvpn/sbin/connect_hook.sh
+        else
+            echo jvn service failed to start. >&2
+        fi
 }
 
 #
@@ -96,13 +101,14 @@ do_stop()
 	#   2 if daemon could not be stopped
 	#   other if a failure occurred
 	start-stop-daemon -n $NAME -v --stop --quiet --retry=TERM/30/KILL/5 --user $DAEMONUSER --exec $DAEMON
-        kill -TERM $(cat $PREFIX/var/run/$NAME/pid)
-        sleep 7s;
-        kill -KILL $(cat $PREFIX/var/run/$NAME/pid)
-        rm -f $PREFIX/var/run/$NAME/pid
-        $PREFIX/var/lib/jvpn/sbin/disconnect_hook.sh
-        # cp /etc/bind/named.conf.forwarders-jvpn /etc/bind/named.conf.forwarders
-        # service bind9 reload
+        if [ -r $PREFIX/var/run/$NAME/pid ]
+        then
+            kill -TERM $(cat $PREFIX/var/run/$NAME/pid)
+            sleep 7s;
+            kill -KILL $(cat $PREFIX/var/run/$NAME/pid)
+            rm -f $PREFIX/var/run/$NAME/pid
+            $PREFIX/var/lib/jvpn/sbin/disconnect_hook.sh
+        fi
 }
 
 do_status()
