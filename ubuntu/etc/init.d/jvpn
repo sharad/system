@@ -86,6 +86,10 @@ do_start()
         then
             $PREFIX/var/lib/jvpn/sbin/connect_hook.sh
         else
+            if [ -e $PREFIX/var/run/$NAME/pid ]
+            then
+                rm -f $PREFIX/var/run/$NAME/pid
+            fi
             echo jvn service failed to start. >&2
         fi
 }
@@ -101,11 +105,17 @@ do_stop()
 	#   2 if daemon could not be stopped
 	#   other if a failure occurred
 	start-stop-daemon -n $NAME -v --stop --quiet --retry=TERM/30/KILL/5 --user $DAEMONUSER --exec $DAEMON
-        if [ -r $PREFIX/var/run/$NAME/pid ]
+        if [ -r $PREFIX/var/run/$NAME/pid ] # file present means disconnect_hook need to be called
         then
-            kill -TERM $(cat $PREFIX/var/run/$NAME/pid)
-            sleep 7s;
-            kill -KILL $(cat $PREFIX/var/run/$NAME/pid)
+            if ps $(cat $PREFIX/var/run/$NAME/pid) 2>&1 > /dev/null
+            then
+                kill -TERM $(cat $PREFIX/var/run/$NAME/pid)
+            fi
+            if ps $(cat $PREFIX/var/run/$NAME/pid) 2>&1 > /dev/null
+            then
+                sleep 7s;
+                kill -KILL $(cat $PREFIX/var/run/$NAME/pid)
+            fi
             rm -f $PREFIX/var/run/$NAME/pid
             $PREFIX/var/lib/jvpn/sbin/disconnect_hook.sh
         fi
@@ -115,7 +125,7 @@ do_status()
 {
 	# Return
         if [ -r $PREFIX/var/run/$NAME/pid ] &&
-            ps -l $(cat $PREFIX/var/run/$NAME/pid)
+            ps h -l $(cat $PREFIX/var/run/$NAME/pid)
         then
             echo instance of $NAME is running with pid $(cat $PREFIX/var/run/$NAME/pid)...
         else
