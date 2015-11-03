@@ -519,3 +519,23 @@ zone "zedo.com" {
         file "/etc/bind/db.intercept";
 };
 
+zone "liverail.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "optimatic.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "spotxchange.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
+zone "jwpltx.com" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
