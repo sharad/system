@@ -539,3 +539,8 @@ zone "jwpltx.com" {
         file "/etc/bind/db.intercept";
 };
 
+zone "teads.tv" {
+        type master;
+        file "/etc/bind/db.intercept";
+};
+
