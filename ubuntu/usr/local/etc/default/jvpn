@@ -1,4 +1,3 @@
 # Uncomment this to get edge node started.
-#JVPN_CONFIG_DONE="yes"
 JVPN_CONFIG_DONE=yes
 CONFIG=meru.ini
