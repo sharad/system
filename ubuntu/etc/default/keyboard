@@ -8,6 +8,7 @@
 XKBMODEL="pc105"
 XKBLAYOUT="us"
 XKBVARIANT=""
+# XKBOPTIONS=""
 XKBOPTIONS="ctrl(ralt_rctrl),ctrl(rctrl_ralt),mykbd(lalt_lctrl),mykbd(caps_lalt)"
 
 # If you don't want to use the XKB layout on the console, you can
