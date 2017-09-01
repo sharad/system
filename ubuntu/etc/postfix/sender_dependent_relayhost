@@ -1,14 +1,18 @@
 # # This sends mail to Gmail
-# @gmail.com smtp.gmail.com
-
-# # Aruba
-# @arubanetworks.com smtp.arubanetworks.com
+# @$EXTERNALDOMAIN smtp.$EXTERNALDOMAIN
 
 
+# $OFFICEDOMAIN2
+@$DOMAIN [mail.$DOMAIN]:587
+#
+# $OFFICEDOMAIN1
+# @$OFFICEDOMAIN1 [exch-cas.$OFFICEDOMAIN1]:587
+# @$OFFICEDOMAIN1 [exch-cas.$OFFICEDOMAIN1]:25
+@$OFFICEDOMAIN1 [smtp.$OFFICEDOMAIN1]:587
 
 # This sends mail to Gmail
-sh4r4d@gmail.com [smtp.gmail.com]:587
-sharad@pratap.net.in [smtp.gmail.com]:587
+$EXTERNALUSER@$EXTERNALDOMAIN [smtp.$EXTERNALDOMAIN]:587
+$EXTERNALUSER1@$EXTERNALDOMAIN1 [smtp.$EXTERNALDOMAIN]:587
 
 # Aruba
 # @arubanetworks.com [smtp.arubanetworks.com]:587
@@ -18,28 +22,17 @@ sharad@pratap.net.in [smtp.gmail.com]:587
 # comp1.bob.com relay:[comp1.bob.com]
 # comp2.bob.com relay:[comp2.bob.com]
 
-# # lispm relay:[lispm]
-# @lispm relay:[localhost]
-# @lispm.net relay:[localhost]
-# @lispm.genera.net relay:[localhost]
 
-@lispm [smtp.gmail.com]:587
-@lispm.net [smtp.gmail.com]:587
-@lispm.genera.net [smtp.gmail.com]:587
+@$HOST [smtp.$EXTERNALDOMAIN]:587
+@$HOST.$DOMAIN [smtp.$EXTERNALDOMAIN]:587
 
 # # THESE SHOULD NOT BE RELAYED TO LOCALHOST creats
 # big problem for remote mail delivery
-# mail user@gmail.com
+# mail user@$EXTERNALDOMAIN
 # as well for local mail delivery
 # mail user
 # cause this problem
-# #    Apr 25 23:23:03 lispm postfix/smtp[12551]: 5A126B05: to=<s@lispm.genera.net>, relay=none, delay=0.1, delays=0.09/0/0/0, dsn=5.4.6, status=bounced (mail for localhost loops back to myself
+# #    Apr 25 23:23:03 $HOST postfix/smtp[12551]: 5A126B05: to=<$USER@$HOST.$DOMAIN>, relay=none, delay=0.1, delays=0.09/0/0/0, dsn=5.4.6, status=bounced (mail for localhost loops back to myself
 #
 # This local delivery can be handled easily by "mydestination" variable.
 #
-
-
-
-
-
-
