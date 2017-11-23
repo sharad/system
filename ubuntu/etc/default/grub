@@ -3,14 +3,17 @@
 # For full documentation of the options in this file, see:
 #   info -f grub -n 'Simple configuration'
 
-GRUB_DEFAULT=saved
-# GRUB_HIDDEN_TIMEOUT=10
-# GRUB_HIDDEN_TIMEOUT_QUIET=false
-GRUB_TIMEOUT=60
+
+# GRUB_DEFAULT=saved
+GRUB_DEFAULT=0
+GRUB_HIDDEN_TIMEOUT=0
+GRUB_HIDDEN_TIMEOUT_QUIET=true
+GRUB_TIMEOUT=10
 GRUB_DISTRIBUTOR=`lsb_release -i -s 2> /dev/null || echo Debian`
 # GRUB_CMDLINE_LINUX_DEFAULT="splash quiet"
+# GRUB_CMDLINE_LINUX_DEFAULT="nomodeset" # never will not let dual monitor work
 GRUB_CMDLINE_LINUX_DEFAULT=""
-GRUB_CMDLINE_LINUX=""
+GRUB_CMDLINE_LINUX="nox2apic"
 
 # Uncomment to enable BadRAM filtering, modify to suit your needs
 # This works with Linux (no patch required) and with any kernel that obtains
@@ -23,7 +26,9 @@ GRUB_CMDLINE_LINUX=""
 # The resolution used on graphical terminal
 # note that you can use only modes which your graphic card supports via VBE
 # you can see them in real GRUB with the command `vbeinfo'
+## https://askubuntu.com/questions/162535/why-does-switching-to-the-tty-give-me-a-blank-screen
 #GRUB_GFXMODE=640x480
+GRUB_GFXMODE=auto
 
 # Uncomment if you don't want GRUB to pass "root=UUID=xxx" parameter to Linux
 #GRUB_DISABLE_LINUX_UUID=true
@@ -33,4 +38,5 @@ GRUB_CMDLINE_LINUX=""
 
 # Uncomment to get a beep at grub start
 #GRUB_INIT_TUNE="480 440 1"
-GRUB_INIT_TUNE="480 440 1"
+## https://gist.github.com/MaxLaumeister/f93717e91c8bd9d435a5
+GRUB_INIT_TUNE="1750 523 1 392 1 523 1 659 1 784 1 1047 1 784 1 415 1 523 1 622 1 831 1 622 1 831 1 1046 1 1244 1 1661 1 1244 1 466 1 587 1 698 1 932 1 1195 1 1397 1 1865 1 1397 1"
