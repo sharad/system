@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Stump Window Manager Quicklisp
+Comment=StumpWM is a tiling window manager written in Common Lisp
+Exec=/usr/local/bin/x-session-stumpwm-ql
+TryExec=run-stumpwm-with-ql
+Icon=
+Type=Application

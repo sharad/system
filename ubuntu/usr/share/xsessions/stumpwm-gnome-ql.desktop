@@ -1,0 +1,8 @@
+
+[Desktop Entry]
+Name=StumpWM Window Quicklisp Manager with GNOME
+Comment=StumpWM with GNOME but without GNOME Panel
+Exec=/usr/local/bin/gnome-session-stumpwm-ql
+TryExec=gnome-session
+Icon=
+Type=Application

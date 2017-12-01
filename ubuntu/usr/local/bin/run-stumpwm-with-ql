@@ -1,0 +1,6 @@
+#!/usr/bin/sbcl
+
+(require :asdf)
+(push #p"/usr/local/share/common-lisp/source/quicklisp/local-projects/stumpwm/" asdf:*central-registry*)
+(ql:quickload "stumpwm")
+(stumpwm:stumpwm)
