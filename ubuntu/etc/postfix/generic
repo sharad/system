@@ -1,11 +1,10 @@
-root@localhost		s@localhost
-root@lispm		s@localhost
-root@lispm.net		s@localhost
-root@lispm.genera.net	s@localhost
-MAILER-DAEMON@lispm.genera.net sh4r4d@gmail.com
+root@localhost		$USER@localhost
+root@$HOST		$USER@localhost
+root@$HOST.$DOMAIN		$USER@localhost
+MAILER-DAEMON@$HOST.$DOMAIN $EXTERNALUSER@$EXTERNALDOMAIN
 
-# s@localhost		sh4r4d@gmail.com
-# s@localhost.localdomain	sh4r4d@gmail.com
-# s@lispm			sh4r4d@gmail.com
-# s@lispm.net		sh4r4d@gmail.com
-# s@lispm.genera.net	sh4r4d@gmail.com
+# $USER@localhost		$EXTERNALUSER@$EXTERNALDOMAIN
+# $USER@localhost.localdomain	$EXTERNALUSER@$EXTERNALDOMAIN
+# $USER@$HOST			$EXTERNALUSER@$EXTERNALDOMAIN
+# $USER@$HOST.$DOMAIN		$EXTERNALUSER@$EXTERNALDOMAIN
+# $USER@$HOST.$DOMAIN	$EXTERNALUSER@$EXTERNALDOMAIN
