@@ -11,6 +11,7 @@ StartupNotify=false
 # name we put on the WM spec check window
 X-GNOME-WMName=StumpWM
 # back compat only 
+X-GnomeWMSettingsLibrary=metacity
 X-GNOME-Autostart-Phase=WindowManager
 X-GNOME-Provides=windowmanager;
 X-GNOME-AutoRestart=true
