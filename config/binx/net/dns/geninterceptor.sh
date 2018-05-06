@@ -1,5 +1,9 @@
 #!/bin/zsh
 
+# https://hosts-file.net/download/hosts.zip
+
+# ls -l /etc/hosts; cd ~/tmp && wget 'https://hosts-file.net/download/hosts.zip' && unzip hosts.zip  && test -r hosts.txt && cat /etc/hosts.orignal <(echo "\n\n\n") hosts.txt > ~/tmp/hosts && sudo cp ~/tmp/hosts /etc/hosts ; ls -l /etc/hosts
+
 
 WM=stumpwm
 
