@@ -2,6 +2,7 @@
 Name=Stump Window Manager
 Comment=StumpWM is a tiling window manager written in Common Lisp
 Exec=/usr/local/bin/x-session-stumpwm
-TryExec=stumpwm
+# TryExec=stumpwm
+TryExec=gnome-session
 Icon=
 Type=Application
