@@ -1,6 +1,14 @@
 # See /usr/share/postfix/main.cf.dist for a commented, more complete version
 
 
+
+myhostname = lispm
+myhostfdn  = lispm.genera.net
+
+
+
+
+
 # Debian specific:  Specifying a file name will cause the first
 # line of that file to be used as the name.  The Debian default
 # is /etc/mailname.
@@ -27,10 +35,9 @@ smtp_tls_session_cache_database = btree:${data_directory}/smtp_scache
 # See /usr/share/doc/postfix/TLS_README.gz in the postfix-doc package for
 # information on enabling SSL in the smtp client.
 
-myhostname = lispm.genera.net
 alias_maps = hash:/etc/aliases
 alias_database = hash:/etc/aliases
-mydestination = lispm.net, lispm, localhost.localdomain, localhost
+mydestination = $myhostfdn, $myhostname, localhost.localdomain, localhost
 # -sharad
 # I want to use transport for multiple relay.
 # relayhost = smtp.localdomain
@@ -227,7 +234,7 @@ defer_transports =
 
 ## {{ for local delivery
 # http://www.postfix.org/LOCAL_RECIPIENT_README.html
-mydestination = $myhostname,lispm.net,localhost.$mydomain,lispm,localhost.localdomain,localhost,lispm.genera.net
+mydestination = $myhostfdn,$myhostname,localhost.$mydomain,lispm,localhost.localdomain,localhost
 relay_domains = localhost.$mydomain,lispm.genera.net
 local_recipient_maps = proxy:unix:passwd.byname $alias_maps
 
