@@ -65,7 +65,7 @@ disable_dns_lookups = yes
 # # Do not accept mail from the network.
 # inet_interfaces = loopback-only
 
-# Now I need to accept mail from lispm and localhost
+# Now I need to accept mail from $myhostname and localhost
 # inet_interfaces = $myhostname localhost
 # inet_interfaces = localhost
 inet_interfaces = all
@@ -234,8 +234,8 @@ defer_transports =
 
 ## {{ for local delivery
 # http://www.postfix.org/LOCAL_RECIPIENT_README.html
-mydestination = $myhostfdn,$myhostname,localhost.$mydomain,lispm,localhost.localdomain,localhost
-relay_domains = localhost.$mydomain,lispm.genera.net
+mydestination = $myhostfdn,$myhostname,localhost.$mydomain,$myhostname,localhost.localdomain,localhost
+relay_domains = localhost.$mydomain,$myhostfdn
 local_recipient_maps = proxy:unix:passwd.byname $alias_maps
 
 ## }}
