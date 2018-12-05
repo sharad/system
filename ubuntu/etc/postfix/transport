@@ -1,27 +1,27 @@
 ## { Section: trouble 11
 # NECESSARY see sestion "trouble 11"
 # This sends mail to Gmail
-$EXTERNALDOMAIN smtp:[smtp.$EXTERNALDOMAIN]:587
-$EXTERNALDOMAIN1 smtp:[smtp.$EXTERNALDOMAIN]:587
+$EXTERNAL1_DOMAIN.$EXTERNAL1_SUPERDOMAIN smtp:[smtp.$EXTERNAL1_DOMAIN.$EXTERNAL1_SUPERDOMAIN]:587
+$EXTERNAL2_DOMAIN.$EXTERNAL2_SUPERDOMAIN smtp:[smtp.$EXTERNAL1_DOMAIN.$EXTERNAL1_SUPERDOMAIN]:587
 
-$OFFICEDOMAIN2 smtp:[mail.$OFFICEDOMAIN2]:587
-# $OFFICEDOMAIN1 smtp:[exch-cas.$OFFICEDOMAIN1]:587
-# $OFFICEDOMAIN1 smtp:[exch-cas.$OFFICEDOMAIN1]:25
-$OFFICEDOMAIN1 smtp:[smtp.$OFFICEDOMAIN1]:587
+$OFFICE2_DOMAIN.$OFFICE2_SUPERDOMAIN smtp:[mail.$OFFICE2_DOMAIN.$OFFICE2_SUPERDOMAIN]:587
+# $OFFICE1_DOMAIN.$OFFICE1_SUPERDOMAIN smtp:[exch-cas.$OFFICE1_DOMAIN.$OFFICE1_SUPERDOMAIN]:587
+# $OFFICE1_DOMAIN.$OFFICE1_SUPERDOMAIN smtp:[exch-cas.$OFFICE1_DOMAIN.$OFFICE1_SUPERDOMAIN]:25
+$OFFICE1_DOMAIN.$OFFICE1_SUPERDOMAIN smtp:[smtp.$OFFICE1_DOMAIN.$OFFICE1_SUPERDOMAIN]:587
 
 
 ## These must be commented.
 # for avoiding
 #    Apr 25 23:22:41 $HOST postfix/qmgr[12538]: 3754BB0A: removed
 #    Apr 25 23:23:03 $HOST postfix/pickup[12539]: 5A126B05: uid=1000 from=<s>
-#    Apr 25 23:23:03 $HOST postfix/cleanup[12547]: 5A126B05: message-id=<20120425175303.5A126B05@$HOST.$OFFICEDOMAIN2>
-#    Apr 25 23:23:03 $HOST postfix/qmgr[12538]: 5A126B05: from=<$USER@$HOST.$OFFICEDOMAIN2>, size=344, nrcpt=1 (queue active)
-#    Apr 25 23:23:03 $HOST postfix/smtp[12551]: 5A126B05: to=<$USER@$HOST.$OFFICEDOMAIN2>, relay=none, delay=0.1, delays=0.09/0/0/0, dsn=5.4.6, status=bounced (mail for localhost loops back to myself
+#    Apr 25 23:23:03 $HOST postfix/cleanup[12547]: 5A126B05: message-id=<20120425175303.5A126B05@$HOST.$OFFICE2_DOMAIN.$OFFICE2_SUPERDOMAIN>
+#    Apr 25 23:23:03 $HOST postfix/qmgr[12538]: 5A126B05: from=<$USER@$HOST.$OFFICE2_DOMAIN.$OFFICE2_SUPERDOMAIN>, size=344, nrcpt=1 (queue active)
+#    Apr 25 23:23:03 $HOST postfix/smtp[12551]: 5A126B05: to=<$USER@$HOST.$OFFICE2_DOMAIN.$OFFICE2_SUPERDOMAIN>, relay=none, delay=0.1, delays=0.09/0/0/0, dsn=5.4.6, status=bounced (mail for localhost loops back to myself
 
-# # $HOST relay:[$HOST]
-# $HOST relay:[localhost]
-# $HOST.$OFFICEDOMAIN2 relay:[localhost]
-# $HOST.$OFFICEDOMAIN2 relay:[localhost]
+# # $MYHOSTNAME relay:[$MYHOSTNAME]
+# $MYHOSTNAME relay:[localhost]
+# $MYHOSTNAME.$OFFICE2_DOMAIN.$OFFICE2_SUPERDOMAIN relay:[localhost]
+# $MYHOSTNAME.$OFFICE2_DOMAIN.$OFFICE2_SUPERDOMAIN relay:[localhost]
 
 
 

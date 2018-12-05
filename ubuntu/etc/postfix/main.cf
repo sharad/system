@@ -2,8 +2,8 @@
 
 
 
-myhostname = lispm
-myhostfdn  = lispm.genera.net
+myhostname = $MYHOSTNAME
+myhostfdn  = $MYHOSTFDN
 
 
 
