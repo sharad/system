@@ -94,6 +94,7 @@ smtp_tls_per_site = hash:/etc/postfix/tls_per_site
 smtp_tls_security_level=verify
 # smtp_tls_CAfile = /etc/postfix/sasl/cacert.pem
 smtp_tls_CAfile = /etc/ssl/certs/ca-certificates.crt
+
 # smtp_tls_CApath = /etc/ssl/certs
 smtp_tls_CApath = /certs
 
