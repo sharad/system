@@ -1,2 +1,2 @@
-root     root@localhost
-
+# root     root@localhost
+root     $OFFICE1_USER@$OFFICE1_DOMAIN.$OFFICE1_SUPERDOMAIN
