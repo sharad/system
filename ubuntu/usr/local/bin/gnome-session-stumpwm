@@ -1,3 +1,8 @@
-#!/bin/bash
+#!/bin/sh
+
+if [ -z $XDG_CURRENT_DESKTOP ]; then
+  export XDG_CURRENT_DESKTOP="GNOME-Flashback:GNOME"
+fi
+
 exec gnome-session --session=stumpwm "$@"
-exit
+# exit

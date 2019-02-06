@@ -1,8 +1,8 @@
 [Desktop Entry]
-Name=GNOME StumpWM
-Comment=This session logs you into GNOME with StumpWM
-Exec=gnome-session --session=gnome-stumpwm --debug
-TryExec=gnome-session
-Icon=
+Name=GNOME + Stumpwm
+Comment=This session logs you into GNOME + Stumpwm
+Exec=/usr/lib/gnome-session/run-systemd-session gnome-session-flashback.target
+TryExec=/usr/local/bin/gnome-session-stumpwm
 Type=Application
-X-Ubuntu-Gettext-Domain=gnome-session-3.0
+DesktopNames=GNOME-Flashback;GNOME;
+X-Ubuntu-Gettext-Domain=gnome-flashback

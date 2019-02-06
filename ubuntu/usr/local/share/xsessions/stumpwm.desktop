@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=Stump Window Manager
-Comment=StumpWM is a tiling window manager written in Common Lisp
-Exec=/usr/local/bin/x-session-stumpwm
-TryExec=stumpwm
-Icon=
-Type=Application
