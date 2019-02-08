@@ -268,3 +268,6 @@ virtual_alias_maps = hash:/etc/postfix/virtual
 
 
 ## }
+
+# https://raymii.org/s/tutorials/Postfix_Log_message_from_to_and_subject_headers.html
+header_checks = regexp:/etc/postfix/header_checks
