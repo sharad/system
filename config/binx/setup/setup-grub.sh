@@ -78,7 +78,7 @@ function main()
 
     if [ ! "$GRUB_DIR" ]
     then
-        GRUB_DIR=~/.setup/grub
+        GRUB_DIR=~/.fa/system/config/config/grub
     fi
 
     if [ ! "$EFI_NAME" ]
